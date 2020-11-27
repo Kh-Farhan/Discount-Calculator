@@ -1,6 +1,6 @@
 
 import React,{Component} from 'react';
-import {StyleSheet,Text,View,array,Alert,TextInput,Icon,FlatList,Modal,TouchableOpacity} from 'react-native';
+import {StyleSheet,Text,View,array,Alert,TextInput,Icon,FlatList,Modal,ScrollView,TouchableOpacity} from 'react-native';
 
 export default class App extends Component{
   constructor(props) {
@@ -43,7 +43,7 @@ export default class App extends Component{
 
   render(){
     return(
-    <View style={styles.container}>
+    <ScrollView><View style={styles.container}>
       <Modal 
           animationType="slide"
           transparent={true}
@@ -101,7 +101,7 @@ export default class App extends Component{
       <Text style={styles.saved}>Saved:{this.state.saved}</Text>
     <Text style={styles.result}>Final Price:{this.state.result}</Text>
 
-    </View>
+    </View></ScrollView>
     );
   }
 }
@@ -180,3 +180,4 @@ const styles = StyleSheet.create({
     color:'#1F9DE7'
   }
 });
+
